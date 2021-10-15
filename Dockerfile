@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.14
 
 MAINTAINER "Xavier Garnier <xavier.garnier@irisa.fr>"
 
@@ -12,7 +12,7 @@ RUN apk add --no-cache --update \
     cython python3 python3-dev \
     build-base openldap-dev python2-dev \
     py3-numpy \
-    nodejs nodejs-npm \
+    nodejs-current npm \
     git bash && \
     mkdir /askomics && \
     cd /askomics && \

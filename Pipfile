@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 werkzeug = "==0.16.1"
-flask = "*"
+flask = "<2"
 flask-reverse-proxy-fix = "*"
 validate-email = "*"
 gunicorn = "*"
@@ -20,14 +20,15 @@ gitpython = "*"
 biopython = "*"
 bcbio-gff = "*"
 bioblend = "*"
-pysam = "==0.15.3"
+pysam = "*"
 pybedtools = "*"
 deepdiff = "*"
-sentry-sdk = "*"
+sentry-sdk = {extras = ["flask"], version = "*"}
 configparser = "*"
 tld = "*"
 argh = "*"
 python-ldap = "*"
+python-dateutil = "*"
 
 [dev-packages]
 pytest = "*"
