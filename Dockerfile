@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.19
 
 MAINTAINER "Xavier Garnier <xavier.garnier@irisa.fr>"
 
@@ -10,7 +10,7 @@ RUN apk add --no-cache --update \
     gcc g++ libstdc++ make \
     zlib-dev libzip-dev bzip2-dev xz-dev \
     cython python3 python3-dev \
-    build-base openldap-dev python2-dev \
+    build-base openldap-dev \
     py3-numpy \
     nodejs-current npm \
     git bash && \
@@ -22,5 +22,5 @@ RUN apk add --no-cache --update \
     mv /Pipfile /askomics/Pipfile && \
     mv /Pipfile.lock /askomics/Pipfile.lock && \
     pip install -r requirements.txt && \
-    pipenv install && \
+    pipenv install
     rm /askomics/requirements.txt /askomics/Pipfile /askomics/Pipfile.lock
