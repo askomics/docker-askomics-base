@@ -22,5 +22,5 @@ RUN apk add --no-cache --update \
     mv /Pipfile /askomics/Pipfile && \
     mv /Pipfile.lock /askomics/Pipfile.lock && \
     pip install -r requirements.txt && \
-    pipenv install
+    pipenv install && \
     rm /askomics/requirements.txt /askomics/Pipfile /askomics/Pipfile.lock
